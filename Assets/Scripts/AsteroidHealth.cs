@@ -11,7 +11,7 @@ public class AsteroidHealth : MonoBehaviour
 
     public GameObject Bullet;
 
-
+    public float score;
 
     void Start()
     {
@@ -23,9 +23,17 @@ public class AsteroidHealth : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         
-        health2 -= 1;
-
         
+
+        if (GameObject.FindWithTag("Bullet") == true) 
+        {
+            health2 -= 1;
+            
+            if (collision.gameObject.CompareTag("Bullet"))
+            {
+                Destroy(collision.gameObject);
+            }
+        }
 
     }
 
@@ -50,6 +58,10 @@ public class AsteroidHealth : MonoBehaviour
         if (health2 == 0)
         {
             GameObject.Destroy(gameObject);
+
+            score += 10;
+            Debug.Log("Score is now " + score);
+
         }
 
     }

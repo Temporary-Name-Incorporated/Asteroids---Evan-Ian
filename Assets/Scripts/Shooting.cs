@@ -13,6 +13,8 @@ public class Shooting : MonoBehaviour
         {
             Shoot();
         }
+
+        
     }
 
     void Shoot()
@@ -22,4 +24,11 @@ public class Shooting : MonoBehaviour
         Rigidbody2D BulletRb = Bullet.GetComponent<Rigidbody2D>();
         BulletRb.linearVelocity = transform.up * BulletSpeed;
     }
+
+    
+
+    
+    
+
+
 }
