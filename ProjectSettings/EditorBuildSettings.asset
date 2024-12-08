@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Asteroids.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Start Menu.unity
+    guid: 0ce48faca51b1a34fb466f1456254446
+  - enabled: 1
+    path: Assets/Scenes/Pause Menu.unity
+    guid: 3926e961d58eb184fb286546344e556c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
