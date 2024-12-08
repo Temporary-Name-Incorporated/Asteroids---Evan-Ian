@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
     public float BulletSpeed = 10f;
     public Transform BulletSpawnPoint;
 
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
