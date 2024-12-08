@@ -15,16 +15,18 @@ public class AsteroidHealth : MonoBehaviour
 
     void Start()
     {
-        health2 = Random.Range(1, 3);
+        health2 = Random.Range(1, 4);
 
         SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        
         health2 -= 1;
 
         
+
     }
 
 
