@@ -1,21 +1,22 @@
 using UnityEngine;
 
-public class BulletScript : MonoBehaviour
+public class Shooting : MonoBehaviour
 {
-    private Vector3 mousepos;
     private Camera maincam;
-    public GameObject Bullet;
-    public Transform BulletTransform;
+    private Vector3 mousepos;
+    public GameObject bullet;
+    public Transform bulletTransform;
     public bool canfire = true; // Start with canfire being true, so shooting can begin
     private float timer;
     public float fireTime = 0.5f; // Time between shots
 
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         maincam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-        
     }
 
+    // Update is called once per frame
     void Update()
     {
         // Convert mouse position to world space
@@ -45,7 +46,7 @@ public class BulletScript : MonoBehaviour
         {
             canfire = false; // Disable firing until the cooldown is finished
             timer = 0; // Reset the timer after firing
-            Instantiate(Bullet, BulletTransform.position, Quaternion.identity); // Fire the bullet
+            Instantiate(bullet, bulletTransform.position, Quaternion.identity); // Fire the bullet
         }
     }
 }
