@@ -11,7 +11,7 @@ public class AsteroidHealth : MonoBehaviour
 
     public GameObject Bullet;
 
-    public float score;
+    public int score = 0;
 
     void Start()
     {
