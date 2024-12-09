@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class NewMonoBehaviourScript : MonoBehaviour
 {
 
-    float playerHealth = 3;
+    int playerHealth = 3;
 
 
 

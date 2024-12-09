@@ -15,7 +15,7 @@ public class AsteroidHealth : MonoBehaviour
 
     public GameObject Bullet;
 
-    float score;
+    
 
     AudioSource explosion;
 
@@ -71,8 +71,7 @@ public class AsteroidHealth : MonoBehaviour
             explosion.Play();
             GameObject.Destroy(gameObject);
 
-            score += 10;
-            Debug.Log("Score is now " + score);
+            
 
             
 
