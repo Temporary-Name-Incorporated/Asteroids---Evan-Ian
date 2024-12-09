@@ -9,6 +9,14 @@ public class PCMovmentReworked : MonoBehaviour
     private bool _thrusting;
     private float _turnDirection;
 
+    AudioSource thruster;
+
+    private void Start()
+    {
+        thruster = GetComponent<AudioSource>();
+    }
+
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -38,7 +46,17 @@ public class PCMovmentReworked : MonoBehaviour
         if (_thrusting) 
         {
             _rigidbody.AddForce(this.transform.up * this.thrustSpeed);
+
+            thruster.Play();
         }
+
+        if (!_thrusting)
+        {
+            thruster.Stop();
+        }
+
+
+
 
         if (_turnDirection != 0.0f)
         {
