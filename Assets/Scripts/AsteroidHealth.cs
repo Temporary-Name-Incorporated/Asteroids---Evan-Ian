@@ -6,13 +6,16 @@ using UnityEngine.Audio;
 
 public class AsteroidHealth : MonoBehaviour
 {
+
+
+
     //int health = Random.Range(1, 3);
     float health2;
     SpriteRenderer SpriteRenderer;
 
     public GameObject Bullet;
 
-    public float score;
+    float score;
 
     AudioSource explosion;
 
