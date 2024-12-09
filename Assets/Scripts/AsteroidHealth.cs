@@ -1,7 +1,8 @@
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Audio;
 
-    
+
 
 public class AsteroidHealth : MonoBehaviour
 {
@@ -13,9 +14,13 @@ public class AsteroidHealth : MonoBehaviour
 
     public float score;
 
+    AudioSource explosion;
+
     void Start()
     {
         health2 = Random.Range(1, 4);
+
+        explosion = GetComponent<AudioSource>();
 
         SpriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -32,6 +37,8 @@ public class AsteroidHealth : MonoBehaviour
             if (collision.gameObject.CompareTag("Bullet"))
             {
                 Destroy(collision.gameObject);
+                
+
             }
         }
 
@@ -61,6 +68,8 @@ public class AsteroidHealth : MonoBehaviour
 
             score += 10;
             Debug.Log("Score is now " + score);
+
+            explosion.Play();
 
         }
 
