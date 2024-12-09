@@ -825,10 +825,10 @@ GameObject:
   - component: {fileID: 412405142}
   - component: {fileID: 412405141}
   - component: {fileID: 412405143}
-  - component: {fileID: 412405144}
   - component: {fileID: 412405145}
   - component: {fileID: 412405146}
   - component: {fileID: 412405147}
+  - component: {fileID: 412405148}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -962,18 +962,6 @@ PolygonCollider2D:
       - {x: 0.004701808, y: -0.13299647}
       - {x: 0.13531071, y: -0.09707411}
   m_UseDelaunayMesh: 0
---- !u!114 &412405144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 412405140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faaf91d9472a0f34da7128b8d6aa751d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &412405145
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1083,9 +1071,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_Mass: 0.5
+  m_LinearDamping: 1
+  m_AngularDamping: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -1195,6 +1183,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &412405148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412405140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3450c5fb508f30d40a74c03a3ce78dab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrustSpeed: 3
+  turnSpeed: 0.4
 --- !u!1001 &457704249
 PrefabInstance:
   m_ObjectHideFlags: 0

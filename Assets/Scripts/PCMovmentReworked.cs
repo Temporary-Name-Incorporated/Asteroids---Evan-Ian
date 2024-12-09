@@ -3,6 +3,8 @@ using UnityEngine;
 public class PCMovmentReworked : MonoBehaviour
 {
     public float thrustSpeed = 1.0f;
+    public float turnSpeed = 1.0f;
+
     private Rigidbody2D _rigidbody;
     private bool _thrusting;
     private float _turnDirection;
@@ -36,6 +38,11 @@ public class PCMovmentReworked : MonoBehaviour
         if (_thrusting) 
         {
             _rigidbody.AddForce(this.transform.up * this.thrustSpeed);
+        }
+
+        if (_turnDirection != 0.0f)
+        {
+            _rigidbody.AddTorque(_turnDirection * this.turnSpeed);
         }
     }
 }
