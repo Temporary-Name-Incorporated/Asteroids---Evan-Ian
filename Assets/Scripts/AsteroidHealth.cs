@@ -30,7 +30,7 @@ public class AsteroidHealth : MonoBehaviour
         
         
 
-        if (GameObject.FindWithTag("Bullet") == true) 
+        if (GameObject.FindWithTag("Bullet") == true)
         {
             health2 -= 1;
             
@@ -64,12 +64,14 @@ public class AsteroidHealth : MonoBehaviour
 
         if (health2 == 0)
         {
+
+            explosion.Play();
             GameObject.Destroy(gameObject);
 
             score += 10;
             Debug.Log("Score is now " + score);
 
-            explosion.Play();
+            
 
         }
 
